@@ -34,7 +34,7 @@ namespace AspNewsApi.Models
         [Column(TypeName = "smalldatetime")]
         public DateTime UpdatedAt { get; set; }
 
-        public int UserID { get; set; }
+        public int UserId { get; set; }
 
         public int? MatterId { get; set; }
 

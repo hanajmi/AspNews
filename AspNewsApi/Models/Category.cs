@@ -11,10 +11,10 @@ namespace AspNewsApi.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Category()
         {
-            CategoryAudios = new HashSet<CategoryAudio>();
-            CategoryMatters = new HashSet<CategoryMatter>();
-            CategoryPhotoes = new HashSet<CategoryPhoto>();
-            CategoryVideos = new HashSet<CategoryVideo>();
+            Audios = new HashSet<Audio>();
+            Matters = new HashSet<Matter>();
+            Photos = new HashSet<Photo>();
+            Videos = new HashSet<Video>();
         }
 
         public int Id { get; set; }
@@ -30,15 +30,15 @@ namespace AspNewsApi.Models
         public DateTime UpdatedAt { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CategoryAudio> CategoryAudios { get; set; }
+        public virtual ICollection<Audio> Audios { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CategoryMatter> CategoryMatters { get; set; }
+        public virtual ICollection<Matter> Matters { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CategoryPhoto> CategoryPhotoes { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CategoryVideo> CategoryVideos { get; set; }
+        public virtual ICollection<Video> Videos { get; set; }
     }
 }

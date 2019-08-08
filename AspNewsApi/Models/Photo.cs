@@ -11,9 +11,9 @@ namespace AspNewsApi.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Photo()
         {
-            CategoryPhotoes = new HashSet<CategoryPhoto>();
             Files = new HashSet<File>();
-            TagPhotoes = new HashSet<TagPhoto>();
+            Categories = new HashSet<Category>();
+            Tags = new HashSet<Tag>();
         }
 
         public int Id { get; set; }
@@ -42,14 +42,14 @@ namespace AspNewsApi.Models
         public DateTime UpdatedAt { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CategoryPhoto> CategoryPhotoes { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<File> Files { get; set; }
 
         public virtual User User { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TagPhoto> TagPhotoes { get; set; }
+        public virtual ICollection<Category> Categories { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tag> Tags { get; set; }
     }
 }
